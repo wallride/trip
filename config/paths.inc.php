@@ -1,0 +1,23 @@
+<?php
+define ('PATH_CLASSES', dirname(__FILE__).'/../src/classes/');
+define ('PATH_CONTROLLERS', dirname(__FILE__).'/../src/controllers/');
+define ('PATH_TEMPLATES', dirname(__FILE__).'/../src/templates/');
+//echo PATH_CONTROLLERS;
+
+set_include_path(
+    get_include_path()
+    .PATH_CLASSES.PATH_SEPARATOR
+    .PATH_CLASSES.'Auto'.PATH_SEPARATOR
+    .PATH_CLASSES.'Auto'.DIRECTORY_SEPARATOR.'Business'.PATH_SEPARATOR
+    .PATH_CLASSES.'Auto'.DIRECTORY_SEPARATOR.'DAOs'.PATH_SEPARATOR
+    .PATH_CLASSES.'Auto'.DIRECTORY_SEPARATOR.'Proto'.PATH_SEPARATOR
+    .PATH_CLASSES.'Business'.PATH_SEPARATOR
+    .PATH_CLASSES.'DAOs'.PATH_SEPARATOR
+    .PATH_CLASSES.'Proto'.PATH_SEPARATOR
+    .PATH_CLASSES.'interfaces'.PATH_SEPARATOR
+    .PATH_CLASSES.'Utils'.PATH_SEPARATOR
+    .PATH_CONTROLLERS.PATH_SEPARATOR
+    .PATH_CONTROLLERS.'Base'.PATH_SEPARATOR
+);
+
+?>

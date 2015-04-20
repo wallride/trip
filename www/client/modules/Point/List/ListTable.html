@@ -1,0 +1,60 @@
+    <tr class="head">
+        <th width="10%">{{:~message('ID')}}</th>
+        <th width="10%">{{:~message('Name')}}</th>
+        <th width="10%">{{:~message('Type')}}</th>
+        <th width="10%">{{:~message('Dealer')}}</th>
+        <th width="10%">{{:~message('Location')}}</th>
+        <th width="10%">{{:~message('Address')}}</th>
+        <th width="10%">{{:~message('Interface')}}</th>
+        <th width="10%">{{:~message('ContactPerson')}}</th>
+        <th width="10%">{{:~message('ContactPhone')}}</th>
+        <th width="10%">{{:~message('DCPlaceType')}}</th>
+        <th width="10%">{{:~message('CanAcceptPayment')}}</th>
+        <th width="10%">{{:~message('Operations')}}</th>
+
+    </tr>
+    {{for list.getAll()}}
+    <tr class="{{:(fields.Point_Enabled.val()?'':'disabled')}}" {{markDataModel:}}>
+        <td>
+            {{:fields.Point_ID}}
+        </td>
+        <td>
+            <a href="#Point/View/?id={{:fields.Point_ID}}" class="modelLink">
+            {{:fields.Point_Name}}
+            </a>
+        </td>
+        <td>
+            {{:fields.PointType_ID}}
+        </td>
+        <td>
+            {{:fields.Dealer_ID}}
+        </td>
+        <td>
+            {{:fields.Location_ID}}
+        </td>
+        <td>
+            {{:fields.Point_Address}}
+        </td>
+        <td>
+            {{:fields.Interface_ID}}
+        </td>
+        <td>
+            {{:fields.Point_ContactName}}
+        </td>       
+        <td>
+            {{:fields.Point_ContactPhone}}
+        </td>       
+        <td>
+            {{:fields.DCPlaceType_ID}}
+        </td>
+        <td>
+            {{:~modelAttribute(fields.Point_CanAcceptPayment, '{"editable":true}') }}
+        </td>        
+        <td>
+            <button type="button" class="button update_point" data-id="{{:fields.Point_ID}}">{{:~message('Update')}}</button>
+        </td>
+        
+    </tr>
+    {{/for}}
+
+    

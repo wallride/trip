@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE metaconfiguration SYSTEM "meta.dtd">
+<metaconfiguration>
+    <classes>
+
+        <!-- Story object -->
+        <class name="Story" extends="CreatedAndModified">
+            <properties>
+                <identifier />
+                <property name="name" type="String" size="255" required="true" />
+                <property name="description" type="String" required="false" />
+                <property name="dateStart" type="Timestamp" relation="OneToOne" fetch="lazy" required="true" />
+                <property name="owner" type="User" relation="OneToOne" fetch="lazy" required="true"/>
+                <property name="members" type="Member" relation="OneToMany"/>
+                <property name="public" type="Boolean" default="false"/>
+            </properties>
+            <pattern name="StraightMapping" />
+        </class>
+
+        <class name="Member" extends="CreatedAndModified">
+            <properties>
+                <identifier />
+                <property name="title" type="String" size="255" />
+                <property name="user" type="User" relation="OneToOne" fetch="lazy" required="true"/>
+                <property name="story" type="Story" relation="OneToOne" fetch="lazy" required="true"/>
+                <property name="type" type="MemberType" relation="OneToOne" fetch="lazy" required="true"/>
+                <property name="status" type="MemberStatus" relation="OneToOne" fetch="lazy" required="true"/>
+            </properties>
+            <pattern name="StraightMapping" />
+        </class>
+
+        <class name="MemberType">
+            <properties>
+                <identifier />
+            </properties>
+            <pattern name="EnumerationClass" />
+        </class>
+        <class name="MemberStatus">
+            <properties>
+                <identifier />
+            </properties>
+            <pattern name="EnumerationClass" />
+        </class>
+
+        <class name="StoryPeriod" extends="CreatedAndModified">
+            <properties>
+                <identifier />
+                <property name="story" type="Story" relation="OneToOne" required="true" />
+                <property name="description" type="String" required="false" />
+                <property name="date" type="Timestamp" relation="OneToOne" fetch="lazy" required="true" />
+            </properties>
+            <pattern name="StraightMapping" />
+        </class>
+                
+        <class name="StoryRecord" extends="CreatedAndModified">
+            <properties>
+                <identifier />
+                <property name="story" type="Story" relation="OneToOne" fetch="lazy" required="true" />
+                <property name="storyPeriod" type="StoryPeriod" relation="OneToOne" fetch="lazy" required="true" />
+                <property name="description" type="String" required="false" />
+                <property name="date" type="Timestamp" relation="OneToOne" fetch="lazy" required="true" />
+                <property name="owner" type="Member" relation="OneToOne" fetch="lazy" required="true"/>
+                <property name="public" type="Boolean" default="false"/>
+            </properties>
+            <pattern name="StraightMapping" />
+        </class>
+                
+                
+
+
+
+
+
+    </classes>
+</metaconfiguration>

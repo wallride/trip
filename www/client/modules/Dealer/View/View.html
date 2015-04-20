@@ -1,0 +1,162 @@
+<div {{markDataModel:object}}>
+    <div class="operationsLine">
+        <a href="#Dealer/List/" class="button">{{:~message('Back to the list')}}</a>
+    </div>
+    <table class="xml edit">
+        <tr>
+            <td colspan="2" class="caption">{{:~message('Common properties')}}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_ID)}}</th>
+            <td width="60%">{{:~modelAttribute(object.fields.Dealer_ID, '{"editable":false, "visible":true}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_Name)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_Name, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.DealerType_ID)}}</th>
+            <td>{{:~modelAttribute(object.fields.DealerType_ID, '{"editable":true}') }}</td>
+        </tr>                
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_Enabled)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_Enabled, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_FinancialBlockEnabled)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_FinancialBlockEnabled, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_BossName)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_BossName, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_ActNumber)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_ActNumber, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_ActDate)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_ActDate, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_UsePatents)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_UsePatents, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_UseParentInfo)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_UseParentInfo, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="caption">{{:~message('Fisical address')}}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Location_ID)}}</th>
+            <td>{{:~modelAttribute(object.fields.Location_ID, '{"editable":true}') }}</td>
+        </tr>        
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_Address)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_Address, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="caption">{{:~message('Legal Information')}}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_UName)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_UName, '{"editable":true}') }}</td>
+        </tr>         
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.U_Location_ID)}}</th>
+            <td>{{:~modelAttribute(object.fields.U_Location_ID, '{"editable":true}') }}</td>
+        </tr>        
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_UAddress)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_UAddress, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="caption">{{:~message('Banking Information')}}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_BankName)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_BankName, '{"editable":true}') }}</td>
+        </tr>        
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_BIK)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_BIK, '{"editable":true}') }}</td>
+        </tr>        
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_R_Account)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_R_Account, '{"editable":true}') }}</td>
+        </tr>        
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_C_Account)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_C_Account, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="caption">{{:~message('Registration information')}}</td>
+        </tr>        
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_INN)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_INN, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_KPP)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_KPP, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_OKPO)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_OKPO, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_OGRN)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_OGRN, '{"editable":true}') }}</td>
+        </tr>        
+        <tr>
+            <td colspan="2" class="caption">{{:~message('Contact information')}}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_ContactName)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_ContactName, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_ContactPhone)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_ContactPhone, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_ContactEMail)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_ContactEMail, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_TSPhone)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_TSPhone, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_TechContactEMail)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_TechContactEMail, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="caption">{{:~message('Settings')}}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_NDS)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_NDS, '{"editable":true}') }}</td>
+        </tr>        
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.CommissionProfile_ID)}}</th>
+            <td>{{:~modelAttribute(object.fields.CommissionProfile_ID, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.TransactionCostProfile_ID)}}</th>
+            <td>{{:~modelAttribute(object.fields.TransactionCostProfile_ID, '{"editable":true}') }}</td>
+        </tr>                     
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Interface_ID)}}</th>
+            <td>{{:~modelAttribute(object.fields.Interface_ID, '{"editable":true}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Dealer_IsOverdraftsFIFO)}}</th>
+            <td>{{:~modelAttribute(object.fields.Dealer_IsOverdraftsFIFO, '{"editable":true}') }}</td>
+        </tr>         
+        
+    </table>
+    
+</div>

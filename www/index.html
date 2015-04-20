@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Your story</title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:700,400,300,100&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/css/style.css"/>
+        <script type="text/javascript" src="client/lib/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="client/lib/jsrender-master/jsrender.min.js"></script>
+        <script type="text/javascript" src="client/lib/backbone/underscore.js"></script>
+        <script type="text/javascript" src="client/lib/backbone/backbone.js"></script>
+        <script type="text/javascript" src="client/lib/jquery.forms.js"></script>
+        <script type="text/javascript" src="client/lib/moment.js"></script>
+        <script type="text/javascript" src="client/lib/Wallride/Wallride.js"></script>
+        <script type="text/javascript" src="client/lib/Wallride/DataTypes.js"></script>
+        <script type="text/javascript" src="client/lib/Wallride/BaseModel.js"></script>
+        <script type="text/javascript" src="client/js/models/models.js"></script>
+        <script type="text/javascript" src="client/js/WallrideUI.js"></script>
+        <script type="text/javascript" src="client/js/application.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var app = new Wallride.Application({
+//                        baseURL: '/2.0/',
+//                        apiPath: 'api.php',
+//                        viewsPath: 'modules/'
+                    },
+                    function() {
+                            // Это оч важно! Чтобы контроллеры использовали 
+                            var getApplication = function() {return app;};
+                            Wallride.View.BaseView.prototype.getApplication = getApplication;
+//                            Wallride.model._base.prototype.getApplication = getApplication;
+                            // Подключаем нужный модуль
+    //                MPS.UI.router.navigate('CommissionProfileTemplate/List/');
+    //                MPS.UI.router.page('CommissionProfileTemplate', 'List');
+                    }
+                );
+            });
+        </script>
+    </head>
+    <body>
+        <header id="_page_header"></header>
+        <div id="_page_container">
+            Please wait a bit.
+            <br/>
+            System is loading...
+        </div>
+        
+        
+    </body>
+</html>

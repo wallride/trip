@@ -1,0 +1,61 @@
+<div class="operationsLine white">
+    <span class="fleft">
+        <input class="search text" type="text" placeholder="{{:~message('Search')}}">
+        <button type="button" class="button to_hide">{{:~message('Additionally')}}</button>
+    </span>
+    {{if MPS.access.hasAccess('Point','Create') }}
+    <a href="#Point/Create/" class="button">{{:~message('Add')}}</a>
+    {{/if}}
+</div>
+
+<div class="searchTable hidden" {{markDataModel:searchPoint}} style="clear:both;">
+    <table class="xml gen ">
+        <tr>
+            <!--th>{{:~modelAttributeLabel(searchPoint.fields.SearchField)}}</th-->
+            <!--td colspan="2" class="search text" title="Введите текст для поиска и нажмите Enter">
+                {{:~modelAttribute(searchPoint.fields.SearchField, '{"editable":true, "mode":"create"}') }}
+            </td-->
+        </tr>        
+
+        <tr>
+            <td colspan="2" class="caption">{{:~message('Additional search parameters')}}</td>
+        </tr>
+        <!--tr>
+            <input class="search text" type="text" title="Введите текст для поиска и нажмите Enter">
+        </tr-->
+        <tr>
+            <th>{{:~modelAttributeLabel(searchPoint.fields.PointType_ID)}}</th>
+            <td>{{:~modelAttribute(searchPoint.fields.PointType_ID, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>        
+        <tr>
+            <th>{{:~modelAttributeLabel(searchPoint.fields.Dealer_ID)}}</th>
+            <td>{{:~modelAttribute(searchPoint.fields.Dealer_ID, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(searchPoint.fields.Interface_ID)}}</th>
+            <td>{{:~modelAttribute(searchPoint.fields.Interface_ID, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(searchPoint.fields.Point_Enabled)}}</th>
+            <td>{{:~modelAttribute(searchPoint.fields.Point_Enabled, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(searchPoint.fields.MaxChildLevel)}}</th>
+            <td>{{:~modelAttribute(searchPoint.fields.MaxChildLevel, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>
+
+        <tr>
+            <td class="caption buttons" colspan="2">
+                <button type="button" class="button show">{{:~message('Show')}}</button>
+            </td>
+        </tr>                                             
+            
+
+    </table>
+</div>
+
+
+<table class="xml gen record_table ListTable"> 
+
+</table>
+    

@@ -1,0 +1,14 @@
+<h1>Ваши истории</h1>
+{{for stories.getAll()}}
+<div class="box dark story" data-id="{{:F.id.val()}}">
+    <div class="box-block">
+        <p>{{:F.name}}</p>
+        <p style="font-size: 80%;">{{:F.description}}</p>
+    </div>
+    <div class="box-block dark" style="font-size: 80%;">
+        {{for F.members.getAll()}}
+            <span>{{:getName()}}</span>
+        {{/for}}
+    </div>
+</div>
+{{/for}}

@@ -1,0 +1,13 @@
+._module_Story_List .story{
+    text-align: left;
+    width:300px;
+    vertical-align: top;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+._module_Story_List .story:hover{
+    text-align: left;
+    width:300px;
+    vertical-align: top;
+    box-shadow: inset 0 0px 0px 5px rgba(0,0,0,0.3);
+}

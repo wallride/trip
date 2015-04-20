@@ -1,0 +1,76 @@
+<div>
+    <div class="operationsLine">
+        <a href="#Point/List/" class="button">{{:~message('Back to the list')}}</a>
+    </div>
+    <table class="xml gen" {{markDataModel:object}}>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Point_Name)}}</th>
+            <td width="70%">{{:~modelAttribute(object.fields.Point_Name, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.PointType_ID)}}</th>
+            <td>{{:~modelAttribute(object.fields.PointType_ID, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>        
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Point_Enabled)}}</th>
+            <td>{{:~modelAttribute(object.fields.Point_Enabled, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Point_Serial)}}</th>
+            <td>{{:~modelAttribute(object.fields.Point_Serial, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Point_SendPaymentPointMessages)}}</th>
+            <td>{{:~modelAttribute(object.fields.Point_SendPaymentPointMessages, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Point_SendDealerPointMessages)}}</th>
+            <td>{{:~modelAttribute(object.fields.Point_SendDealerPointMessages, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="caption">{{:~message('Terminal location')}}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Location_ID)}}</th>
+            <td>{{:~modelAttribute(object.fields.Location_ID, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Point_Address)}}</th>
+            <td>{{:~modelAttribute(object.fields.Point_Address, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Point_AddressComment)}}</th>
+            <td>{{:~modelAttribute(object.fields.Point_AddressComment, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>                                        
+        <tr>
+            <td colspan="2" class="caption">{{:~message('Contact information')}}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Point_ContactName)}}</th>
+            <td>{{:~modelAttribute(object.fields.Point_ContactName, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>                                        
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Point_ContactPhone)}}</th>
+            <td>{{:~modelAttribute(object.fields.Point_ContactPhone, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>                                        
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Point_TechContactEMail)}}</th>
+            <td>{{:~modelAttribute(object.fields.Point_TechContactEMail, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>                                        
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.Point_MaxPayValue)}}</th>
+            <td>{{:~modelAttribute(object.fields.Point_MaxPayValue, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>
+        <tr>
+            <th>{{:~modelAttributeLabel(object.fields.DCPlaceType_ID)}}</th>
+            <td>{{:~modelAttribute(object.fields.DCPlaceType_ID, '{"editable":true, "mode":"create"}') }}</td>
+        </tr>                                                 
+            
+        <tr>
+            <td class="caption buttons" colspan="2">
+                <button type="button" class="button create">{{:~message('Save')}}</button>
+            </td>
+        </tr>
+    </table>
+    
+</div>

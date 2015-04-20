@@ -1,0 +1,26 @@
+{{if MPS.access.hasAccess('Dealer','Create') }}
+<div class="operationsLine">
+    <a href="#Dealer/Create/" class="button">{{:~message('Add')}}</a>
+</div>
+{{/if}}
+
+<table class="xml gen record_table ">
+    <tr class="head">
+        <th width="20%">{{:~message('Name')}}</th>
+        <th width="20%">{{:~message('Type')}}</th>
+        <!--th width="20%">{{:~message('Agent')}}</th-->
+    </tr>
+    {{for list.getAll()}}
+    <tr class="{{:(fields.Dealer_Enabled.val()?'':'disabled')}}" {{markDataModel:}}>
+        <td>
+            {{modelLink:}}
+        </td>
+        <td>
+            {{:fields.DealerType_ID}}
+        </td>         
+        <!--td>
+            {{:fields.Parent_Dealer_ID}}
+        </td-->
+    </tr>
+    {{/for}}
+</table>

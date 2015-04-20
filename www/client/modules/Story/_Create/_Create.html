@@ -1,0 +1,26 @@
+<form class="form" method="post">
+    <h3 class="box-block light">
+        О чём ваша история?
+    </h3>
+    <div class="box-block">
+        <input type="hidden" name="authType" value="1"/>
+        <fieldset>
+            <label>Story title</label>
+            <input name="name" value="" tabindex="1"/>
+        </fieldset>
+        <fieldset>
+            <label>Description</label>
+            <textarea name='description' tabindex="2"></textarea>
+        </fieldset>
+        <fieldset>
+            <label>When the story began</label>
+            <input name="dateStart" value="" type="date" tabindex="3"/>
+        </fieldset>
+        <fieldset>
+            <label><input name="public" value="1" type="checkbox" tabindex="4"/> Can be watched by your friends</label>
+        </fieldset>
+    </div>
+    <div class="box-block textRight">
+        <button type="submit" class="btnGreen big" tabindex="5">Continue</button>
+    </div>
+</form>

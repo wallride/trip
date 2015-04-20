@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE metaconfiguration SYSTEM "meta.dtd">
+<metaconfiguration>
+	<classes>
+
+                <class name="EnumControllerAction">
+			<properties>
+				<identifier />
+			</properties>
+			<pattern name="EnumerationClass" />
+		</class>
+                
+                <class name="EnumObjectStatus">
+			<properties>
+				<identifier />
+			</properties>
+			<pattern name="EnumerationClass" />
+		</class>
+                
+	</classes>
+</metaconfiguration>

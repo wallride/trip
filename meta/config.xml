@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE metaconfiguration SYSTEM "meta.dtd">
+<metaconfiguration>
+
+	<!-- Projects -->
+	
+	<!-- It must be included first -->
+	<include file="common/config.xml" generate="true" />
+	<include file="users/config.xml" generate="true" />
+	<include file="stories/config.xml" generate="true" />
+	
+	<!-- /Projects -->
+	
+</metaconfiguration>
