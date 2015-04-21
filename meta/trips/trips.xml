@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE metaconfiguration SYSTEM "meta.dtd">
+<metaconfiguration>
+    <classes>
+
+        <!-- Trip object -->
+        <class name="Trip" extends="CreatedAndModified">
+            <properties>
+                <identifier />
+                <property name="name" type="String" size="255" required="true" />
+                <property name="description" type="String" required="false" />
+                <property name="dateStart" type="Timestamp" relation="OneToOne" fetch="lazy" required="true" />
+                <property name="dateEnd" type="Timestamp" relation="OneToOne" fetch="lazy" required="true" />
+                <property name="owner" type="User" relation="OneToOne" fetch="lazy" required="true"/>
+                <property name="members" type="Member" relation="OneToMany"/>
+                <property name="public" type="Boolean" default="false"/>
+            </properties>
+            <pattern name="StraightMapping" />
+        </class>
+
+        <class name="Member" extends="CreatedAndModified">
+            <properties>
+                <identifier />
+                <property name="user" type="User" relation="OneToOne" fetch="lazy" required="true"/>
+                <property name="trip" type="Trip" relation="OneToOne" fetch="lazy" required="true"/>
+                <property name="status" type="MemberStatus" relation="OneToOne" fetch="lazy" required="true"/>
+            </properties>
+            <pattern name="StraightMapping" />
+        </class>
+
+        <class name="MemberStatus">
+            <properties>
+                <identifier />
+            </properties>
+            <pattern name="EnumerationClass" />
+        </class>
+
+                
+        <class name="Point" extends="AbstractPoint">
+            <properties>
+                <identifier />
+                <property name="trip" type="Trip" relation="OneToOne" fetch="lazy" required="true"/>
+                <property name="location" type="Point" relation="OneToOne" fetch="lazy" required="false"/>
+                <property name="name" type="String" size="255" required="true" />
+                <property name="description" type="String" required="false" />
+                <property name="dateStart" type="Timestamp" relation="OneToOne" fetch="lazy" required="true" />
+                <property name="dateEnd" type="Timestamp" relation="OneToOne" fetch="lazy" required="true" />
+            </properties>
+            <pattern name="StraightMapping" />
+        </class>
+        
+
+
+
+
+
+    </classes>
+</metaconfiguration>

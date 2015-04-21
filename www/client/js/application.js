@@ -143,8 +143,6 @@ Wallride.Application = function(options, onload){
         _APP.user = user;
 //        Wallride.UI.router.navigate('Welcome');
 //        Wallride.UI.router.page('Welcome');
-        Wallride.UI.router = new Wallride.UI.Router();
-        Backbone.history.start();  // Запускаем HTML5 History push   
         Wallride.View.dispatcher.resolveView('_Utils', '_Header', function(modView){
             Wallride.UI.routeLoadingNow = null;
             modView.setElement($('#_page_header'));
@@ -154,9 +152,7 @@ Wallride.Application = function(options, onload){
         
     };
     this.loggedOut = function(){
-        Wallride.UI.router = new Wallride.UI.Router();
-        Backbone.history.start();  // Запускаем HTML5 History push   
-        Wallride.UI.router.navigate('Sign/In/');
+        Wallride.UI.router.navigate('Sign/In');
         Wallride.UI.router.page('Sign', 'In');
     };
     
@@ -165,6 +161,8 @@ Wallride.Application = function(options, onload){
     // В конечном варианте всё это выносится в HEAD основного html-файла приложения
     loadScript(settings.baseURL+'lib/Wallride/ViewsDispatcher.js', function(){
         loadScript(settings.baseURL+'modules/routing.js', function(){
+            Wallride.UI.router = new Wallride.UI.Router();
+            Backbone.history.start();  // Запускаем HTML5 History push   
             try{
                 _APP.api.ajax('User','login', {}, 
                     function(d){
@@ -177,8 +175,8 @@ Wallride.Application = function(options, onload){
                 );  
             } catch(e){
                 Wallride.UI.router = new Wallride.UI.Router();
-                Backbone.history.start();  // Запускаем HTML5 History push   
-                _APP.loggedOut();
+//                Backbone.history.start();  // Запускаем HTML5 History push   
+//                _APP.loggedOut();
             }
             if (typeof onload === 'function') onload();
         });

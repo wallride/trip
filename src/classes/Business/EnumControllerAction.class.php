@@ -7,7 +7,6 @@
 
 class EnumControllerAction extends Enumeration
 {
-        // implement me!
     const GET = 1;
     const GET_LIST = 2;
     const CREATE = 3;

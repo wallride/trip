@@ -32,8 +32,8 @@ Wallride.View.Dispatcher = function(){
         
         Wallride.load.script(url, function(){
             var obj = makeObject();
-            if (typeof obj === 'undefined'){
-                throw new Exception('Could not rise view of class '+className);
+            if (!obj){
+                throw 'Could not rise view of class '+className;
             }
             obj.loadTemplate(function(){
                 self.views[path]=obj;
@@ -51,6 +51,7 @@ Wallride.View.BaseView = function(){
     this.viewName = 'default';
     this.path = 'default';
     this.data = {};
+    this.packageModule = null;
     this.template  = null;
     this.$element = null;
     this.params={};

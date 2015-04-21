@@ -1,12 +1,21 @@
 Wallride.UI.Router = Backbone.Router.extend({
     routes: {
         "": "page", 
-        ":pkg": "page", 
-        ":pkg/": "page", 
-        ":pkg/?:params": "page",
-        ":pkg/:module/": "page",
+        "Trip":"trips",
+        "Trip/Create":"trips",
+        "Trip/:id":"trips",
+        "Trip/:id/:module":"trips",
+        "Trip/:id/:module?:params":"trips",
+        ":pkg": "page",
         ":pkg/:module": "page",
-        ":pkg/*module/?:params": "page"
+        ":pkg/:module?:params": "page"
+    },
+    
+    trips: function(id, module, params){
+        if (!id && !module) module = 'List';
+        if (id && !module) module = 'View';
+        if (id) params = $.extend( params||{},{tripId:id});
+        return this.page('Trip', module, params);
     },
 
     page: function(pkg, module, params){
@@ -41,6 +50,7 @@ Wallride.UI.Router = Backbone.Router.extend({
                     var $e = $('<div class="'+modViewClassName+'"></div>');
                     modView.setElement($e.appendTo($container.empty()));
                     modView.placeLoader();
+                    modView.packageModule = pkgView;
                     modView.setParams(params);
 //                    console.log('loaded module', module, $container.get(0));
                     modView.run();

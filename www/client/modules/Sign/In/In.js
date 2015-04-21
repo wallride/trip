@@ -18,6 +18,8 @@ SignInModule = function(){
                     function(data){
                         api.key = data.token.utoken;
                         app.loggedIn(data.object);
+                        Wallride.UI.router.navigate('Trip');
+                        Wallride.UI.router.trips();
                     }
                 );
             }

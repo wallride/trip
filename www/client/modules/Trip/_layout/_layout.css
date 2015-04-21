@@ -1,0 +1,11 @@
+._package_Trip>.widthLimiter{
+    position: relative;
+    z-index: 2;
+}
+._package_Trip>.gmap{
+    position: fixed;
+    width:100%;
+    height: 100%;
+    z-index: 1;
+    background: #C1CAD6;
+}

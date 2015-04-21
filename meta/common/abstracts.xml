@@ -15,6 +15,33 @@
         </class>
 
 
+        <class name="AbstractPoint" type="abstract">
+            <implement interface="IArrayable"/>
+            <implement interface="IExtendedArrayable"/>
+            <properties>
+                <identifier />
+                <property name="pointType" type="PointType" relation="OneToOne" fetch="lazy" required="true"/>
+                <property name="POIType" type="POIType" relation="OneToOne" fetch="lazy" required="true"/>
+                <property name="name" type="String" size="255" required="true" />
+                <property name="lat" type="Float" size="16" required="true" />
+                <property name="lng" type="Float" size="16" required="true" />
+            </properties>
+            <pattern name="AbstractClass" />
+        </class>
+
+        <class name="PointType">
+            <properties>
+                <identifier />
+            </properties>
+            <pattern name="EnumerationClass" />
+        </class>
+        <class name="POIType">
+            <properties>
+                <identifier />
+            </properties>
+            <pattern name="EnumerationClass" />
+        </class>
+
 
 
 
